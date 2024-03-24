@@ -25,9 +25,7 @@ function App() {
 
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].toLowerCase() in customDictionary) {
-        setSuggestedText(
-          (prevState) => prevState + " " + customDictionary[`${arr[i]}`]
-        );
+        setSuggestedText(customDictionary[`${arr[i].toLowerCase()}`]);
         break;
       }
     }
